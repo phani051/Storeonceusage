@@ -21,7 +21,7 @@ st.markdown("# *StoreOnce* usage *analysis*.")
 # st.header("Interactive Chart 🪄")
 # st.write("It's your turn to select a StoreOnce")
 #
-# selected_storeonce = st.selectbox("Select a storeonce", list(rawdata.soname.unique())[::-1], key="one" )
+# selected_storeonce = st.selectbox("Select a storeonce", list(rawdata.soname.unique())[::-1], key="one", index=list(rawdata.soname.unique())[::-1].index("cstoreonce07"), )
 #
 # if selected_storeonce:
 #     df_selected_storeonce = rawdata[rawdata.soname == selected_storeonce]
@@ -40,7 +40,7 @@ st.markdown("# *StoreOnce* usage *analysis*.")
 st.header("How about a line chart? 📈")
 st.write("Track changes over time")
 
-selected_storeonce = st.selectbox("Select a storeonce", list(rawdata.soname.unique())[::-1], key="two")
+selected_storeonce = st.selectbox("Select a storeonce", list(rawdata.soname.unique())[::-1], key="two", index=list(rawdata.soname.unique())[::-1].index("cstoreonce07"),)
 
 if selected_storeonce:
     df_selected_storeonce = rawdata[rawdata.soname == selected_storeonce]
@@ -75,7 +75,7 @@ if selected_storeonce:
 st.header("5. Sprinkle in more interactivity 🪄")
 
 
-selected_storeonce = st.selectbox("Select a storeonce", list(rawdata.soname.unique())[::-1], key="three")
+selected_storeonce = st.selectbox("Select a storeonce", list(rawdata.soname.unique())[::-1], key="three", index=list(rawdata.soname.unique())[::-1].index("cstoreonce07"),)
 
 # Date Range
 start_date = datetime(2025, 1, 2)
